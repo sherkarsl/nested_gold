@@ -1,0 +1,13 @@
+<fieldset>
+  <%= f.label :description, "Project Category" %>
+  <%= f.text_field :description %>
+  <%= f.label :project_id %>
+   <%= f.text_field :project_id %>
+  <%= f.hidden_field :_destroy %>
+  <%= link_to "remove", '#', class: "remove_fields" %>
+
+  <%= f.fields_for :tasks do |tasks_form| %>
+    <%= render 'task_fields', f: tasks_form %>
+  <% end %>
+  <%= link_to_add_fields "Add tasks", f, :tasks %>
+</fieldset>

@@ -1,0 +1,61 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :company %><br>
+    <%= f.text_field :company %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :supervisior %><br>
+    <%= f.text_field :supervisior %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :manday %><br>
+    <%= f.number_field :manday %>
+  </div>
+  <div class="field">
+    <%= f.label :workingweek %><br>
+    <%= f.number_field :workingweek %>
+  </div>
+  <div class="field">
+    <%= f.label :holiday %><br>
+    <%= f.number_field :holiday %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+   <%= f.fields_for :project_categories do |cats_for_form| %>
+    <%= render 'project_category_fields', f: cats_for_form %>
+  <% end %>
+  <%= link_to_add_fields "Add project category ", f, :project_categories %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
