@@ -698,3 +698,1741 @@ Processing by ProjectCategoriesController#index as HTML
   [1m[36mProject Load (1.7ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
   Rendered project_categories/index.html.erb within layouts/application (190.0ms)
 Completed 200 OK in 260ms (Views: 250.8ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-10 06:08:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (1.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 218ms (Views: 168.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2015-08-10 06:09:16 -0500
+Processing by ProjectsController#new as HTML
+  Rendered projects/_task_fields.html.erb (9.2ms)
+  Rendered projects/_project_category_fields.html.erb (32.3ms)
+  Rendered projects/_task_fields.html.erb (4.5ms)
+  Rendered projects/_project_category_fields.html.erb (6.9ms)
+  Rendered projects/_form.html.erb (92.4ms)
+  Rendered projects/new.html.erb within layouts/application (101.7ms)
+Completed 200 OK in 302ms (Views: 228.0ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/project_categories" for 127.0.0.1 at 2015-08-10 06:09:26 -0500
+Processing by ProjectCategoriesController#index as HTML
+  [1m[36mProjectCategory Load (9.1ms)[0m  [1mSELECT "project_categories".* FROM "project_categories"[0m
+  [1m[35mProject Load (0.5ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered project_categories/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 103ms (Views: 92.0ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/project_categories/new" for 127.0.0.1 at 2015-08-10 06:09:28 -0500
+Processing by ProjectCategoriesController#new as HTML
+  Rendered project_categories/_form.html.erb (2.7ms)
+  Rendered project_categories/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 120ms (Views: 119.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/project_categories" for 127.0.0.1 at 2015-08-10 06:09:31 -0500
+Processing by ProjectCategoriesController#index as HTML
+  [1m[36mProjectCategory Load (0.4ms)[0m  [1mSELECT "project_categories".* FROM "project_categories"[0m
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered project_categories/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 82ms (Views: 80.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/project_categories/1" for 127.0.0.1 at 2015-08-10 06:09:34 -0500
+Processing by ProjectCategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjectCategory Load (0.4ms)[0m  [1mSELECT  "project_categories".* FROM "project_categories" WHERE "project_categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (1.4ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered project_categories/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 82ms (Views: 74.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/project_categories" for 127.0.0.1 at 2015-08-10 06:09:36 -0500
+Processing by ProjectCategoriesController#index as HTML
+  [1m[36mProjectCategory Load (0.4ms)[0m  [1mSELECT "project_categories".* FROM "project_categories"[0m
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered project_categories/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 79ms (Views: 77.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 06:09:42 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (5.5ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 93ms (Views: 86.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 06:09:47 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.4ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.4ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:68:in `project_params'
+  app/controllers/projects_controller.rb:24:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (66.7ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 06:09:47 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.5ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:68:in `project_params'
+  app/controllers/projects_controller.rb:24:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (55.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (13.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (111.1ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-08-10 06:13:16 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (108.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered projects/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 203ms (Views: 73.6ms | ActiveRecord: 109.8ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 06:13:18 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:69:in `project_params'
+  app/controllers/projects_controller.rb:24:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (60.4ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 06:13:18 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (1.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 400 Bad Request in 4ms (ActiveRecord: 1.1ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:69:in `project_params'
+  app/controllers/projects_controller.rb:24:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (8.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (34.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (61.3ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 06:14:10 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 400 Bad Request in 29ms (ActiveRecord: 4.7ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:69:in `project_params'
+  app/controllers/projects_controller.rb:24:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (35.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (66.9ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 06:18:42 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 400 Bad Request in 33ms (ActiveRecord: 13.9ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:69:in `project_params'
+  app/controllers/projects_controller.rb:24:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (8.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (4.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (81.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 06:20:16 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (3.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 137ms (Views: 114.3ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 06:20:19 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `pry' for #<Binding:0xb4ca52d8>):
+  app/controllers/projects_controller.rb:24:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (7.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (74.8ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 06:20:19 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (9.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 9.2ms)
+
+NoMethodError (undefined method `pry' for #<Binding:0xb42a9e3c>):
+  app/controllers/projects_controller.rb:24:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (24.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (66.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 06:20:49 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (1.2ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 232ms (Views: 208.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 06:20:52 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 400 Bad Request in 405622ms (ActiveRecord: 0.7ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:70:in `project_params'
+  app/controllers/projects_controller.rb:25:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (4.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (84.6ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 06:27:38 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 400 Bad Request in 8864ms (ActiveRecord: 0.3ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:70:in `project_params'
+  app/controllers/projects_controller.rb:25:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (35.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (68.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2015-08-10 06:28:12 -0500
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (2.8ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 89ms (Views: 83.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2015-08-10 06:28:25 -0500
+Processing by TasksController#new as HTML
+  Rendered tasks/_form.html.erb (79.6ms)
+  Rendered tasks/new.html.erb within layouts/application (86.3ms)
+Completed 200 OK in 170ms (Views: 148.7ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2015-08-10 06:29:05 -0500
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p4HTG+P865NElAQ47SzHdYnZ6M9RbLIpZcNlnpirGbixq7r7J/dkVPxtkULRDv/cIxprItD369qONAraOz0/BA==", "task"=>{"description"=>"task 1", "startdate(1i)"=>"2015", "startdate(2i)"=>"8", "startdate(3i)"=>"10", "startdate(4i)"=>"11", "startdate(5i)"=>"28", "enddate(1i)"=>"2015", "enddate(2i)"=>"8", "enddate(3i)"=>"10", "enddate(4i)"=>"11", "enddate(5i)"=>"28", "toatalmandays"=>"5", "project_category_id"=>"1"}, "commit"=>"Create Task"}
+  [1m[35m (5.1ms)[0m  BEGIN
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "tasks" ("description", "toatalmandays", "project_category_id", "startdate", "enddate", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["description", "task 1"], ["toatalmandays", 5], ["project_category_id", 1], ["startdate", "2015-08-10 11:28:00.000000"], ["enddate", "2015-08-10 11:28:00.000000"], ["created_at", "2015-08-10 11:29:05.579690"], ["updated_at", "2015-08-10 11:29:05.579690"]]
+  [1m[35m (2.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/tasks/1
+Completed 302 Found in 32ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2015-08-10 06:29:05 -0500
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProjectCategory Load (1.1ms)[0m  SELECT  "project_categories".* FROM "project_categories" WHERE "project_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered tasks/show.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 125ms (Views: 115.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2015-08-10 06:29:08 -0500
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  [1m[35mProjectCategory Load (0.2ms)[0m  SELECT  "project_categories".* FROM "project_categories" WHERE "project_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 65ms (Views: 64.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/project_categories" for 127.0.0.1 at 2015-08-10 06:29:24 -0500
+Processing by ProjectCategoriesController#index as HTML
+  [1m[36mProjectCategory Load (9.1ms)[0m  [1mSELECT "project_categories".* FROM "project_categories"[0m
+  [1m[35mProject Load (0.5ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered project_categories/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 95ms (Views: 84.6ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/project_categories/1/edit" for 127.0.0.1 at 2015-08-10 06:29:35 -0500
+Processing by ProjectCategoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjectCategory Load (0.3ms)[0m  [1mSELECT  "project_categories".* FROM "project_categories" WHERE "project_categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered project_categories/_form.html.erb (2.7ms)
+  Rendered project_categories/edit.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 103ms (Views: 101.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/project_categories/1" for 127.0.0.1 at 2015-08-10 06:29:37 -0500
+Processing by ProjectCategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qkIh1td9OXAmMK0JG9lpOUYHGRIpUaxNE7oMtxddyBq8aEg2E3a2t57JOHMn+1GQ7MSa/6jK9b74TWPztMvupg==", "project_category"=>{"description"=>"category one", "project_id"=>"2"}, "commit"=>"Update Project category", "id"=>"1"}
+  [1m[35mProjectCategory Load (0.3ms)[0m  SELECT  "project_categories".* FROM "project_categories" WHERE "project_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/project_categories/1
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/project_categories/1" for 127.0.0.1 at 2015-08-10 06:29:37 -0500
+Processing by ProjectCategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProjectCategory Load (5.0ms)[0m  [1mSELECT  "project_categories".* FROM "project_categories" WHERE "project_categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProject Load (5.4ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered project_categories/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 94ms (Views: 82.3ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/project_categories" for 127.0.0.1 at 2015-08-10 06:29:39 -0500
+Processing by ProjectCategoriesController#index as HTML
+  [1m[36mProjectCategory Load (0.3ms)[0m  [1mSELECT "project_categories".* FROM "project_categories"[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered project_categories/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 67ms (Views: 65.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 06:29:45 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (6.0ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 82ms (Views: 75.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 06:29:48 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 400 Bad Request in 6173466ms (ActiveRecord: 0.3ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:70:in `project_params'
+  app/controllers/projects_controller.rb:25:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (7.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (61.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (118.7ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 08:12:43 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (11.3ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 400 Bad Request in 4334ms (ActiveRecord: 11.3ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:70:in `project_params'
+  app/controllers/projects_controller.rb:25:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (8.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (5.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 08:13:01 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.5ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 149ms (Views: 147.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2015-08-10 08:13:08 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered projects/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 101ms (Views: 98.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 08:13:13 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.6ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 82ms (Views: 80.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2015-08-10 08:13:31 -0500
+Processing by ProjectsController#new as HTML
+  Rendered projects/_task_fields.html.erb (1.3ms)
+  Rendered projects/_project_category_fields.html.erb (18.1ms)
+  Rendered projects/_task_fields.html.erb (0.1ms)
+  Rendered projects/_project_category_fields.html.erb (3.3ms)
+  Rendered projects/_form.html.erb (62.3ms)
+  Rendered projects/new.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 190ms (Views: 148.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 08:13:50 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (1.1ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2015-08-10 08:17:37 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered projects/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 130919ms (Views: 60.6ms | ActiveRecord: 34.6ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2015-08-10 08:19:48 -0500
+Processing by ProjectsController#new as HTML
+  Rendered projects/_task_fields.html.erb (0.7ms)
+  Rendered projects/_project_category_fields.html.erb (49.4ms)
+  Rendered projects/_task_fields.html.erb (0.6ms)
+  Rendered projects/_project_category_fields.html.erb (3.1ms)
+  Rendered projects/_form.html.erb (62.9ms)
+  Rendered projects/new.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 178ms (Views: 122.1ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2015-08-10 08:32:25 -0500
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HNK6alKfA+JAbi566OEw/LPnJqVH4Zedxpw0SH8YFggK+NOKlpSMJfiXuwDUwwhVGSSlSMZ6zm4ta1sM3I4wtA==", "project"=>{"title"=>"Project 2", "description"=>"Prj 2", "company"=>"once", "location"=>"third", "supervisior"=>"lu", "date(1i)"=>"2015", "date(2i)"=>"8", "date(3i)"=>"10", "date(4i)"=>"13", "date(5i)"=>"19", "manday"=>"6", "workingweek"=>"5", "holiday"=>"4", "user_id"=>"1", "project_categories_attributes"=>{"0"=>{"description"=>"", "project_id"=>"", "_destroy"=>"false"}}}, "commit"=>"Create Project"}
+Unpermitted parameter: _destroy
+  [1m[36m (6.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (37.5ms)[0m  INSERT INTO "projects" ("title", "description", "company", "location", "supervisior", "manday", "workingweek", "holiday", "user_id", "date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["title", "Project 2"], ["description", "Prj 2"], ["company", "once"], ["location", "third"], ["supervisior", "lu"], ["manday", 6], ["workingweek", 5], ["holiday", 4], ["user_id", 1], ["date", "2015-08-10 13:19:00.000000"], ["created_at", "2015-08-10 13:32:25.660934"], ["updated_at", "2015-08-10 13:32:25.660934"]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "project_categories" ("description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", ""], ["project_id", 3], ["created_at", "2015-08-10 13:32:25.703674"], ["updated_at", "2015-08-10 13:32:25.703674"]]
+  [1m[35m (17.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/projects/3
+Completed 302 Found in 96ms (ActiveRecord: 64.6ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2015-08-10 08:32:25 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (5.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", "3"]]
+  Rendered projects/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 88ms (Views: 80.0ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/project_categories" for 127.0.0.1 at 2015-08-10 08:32:36 -0500
+Processing by ProjectCategoriesController#index as HTML
+  [1m[36mProjectCategory Load (0.4ms)[0m  [1mSELECT "project_categories".* FROM "project_categories"[0m
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered project_categories/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 89ms (Views: 86.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/project_categories/2" for 127.0.0.1 at 2015-08-10 08:32:42 -0500
+Processing by ProjectCategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProjectCategory Load (0.6ms)[0m  SELECT  "project_categories".* FROM "project_categories" WHERE "project_categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered project_categories/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 74ms (Views: 71.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/project_categories/2/edit" for 127.0.0.1 at 2015-08-10 08:32:49 -0500
+Processing by ProjectCategoriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProjectCategory Load (0.2ms)[0m  SELECT  "project_categories".* FROM "project_categories" WHERE "project_categories"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered project_categories/_form.html.erb (1.7ms)
+  Rendered project_categories/edit.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 93ms (Views: 91.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/project_categories/2" for 127.0.0.1 at 2015-08-10 08:33:10 -0500
+Processing by ProjectCategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d7JwZJl7nuYLb84e2PodR1tpvoMy1JvKmMH73jVWKFJhmBmEXXARIbOWW2Tk2CXu8ao9brNPwjlzNpSalsAO7g==", "project_category"=>{"description"=>"Category 2", "project_id"=>"2"}, "commit"=>"Update Project category", "id"=>"2"}
+  [1m[36mProjectCategory Load (1.3ms)[0m  [1mSELECT  "project_categories".* FROM "project_categories" WHERE "project_categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "project_categories" SET "description" = $1, "project_id" = $2, "updated_at" = $3 WHERE "project_categories"."id" = $4[0m  [["description", "Category 2"], ["project_id", 2], ["updated_at", "2015-08-10 13:33:10.870405"], ["id", 2]]
+  [1m[35m (7.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/project_categories/2
+Completed 302 Found in 209ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/project_categories/2" for 127.0.0.1 at 2015-08-10 08:33:11 -0500
+Processing by ProjectCategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProjectCategory Load (3.2ms)[0m  [1mSELECT  "project_categories".* FROM "project_categories" WHERE "project_categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProject Load (0.5ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered project_categories/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/project_categories" for 127.0.0.1 at 2015-08-10 08:33:13 -0500
+Processing by ProjectCategoriesController#index as HTML
+  [1m[36mProjectCategory Load (0.6ms)[0m  [1mSELECT "project_categories".* FROM "project_categories"[0m
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered project_categories/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2015-08-10 08:33:26 -0500
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks"
+  [1m[36mProjectCategory Load (3.4ms)[0m  [1mSELECT  "project_categories".* FROM "project_categories" WHERE "project_categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered tasks/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 85ms (Views: 75.4ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2015-08-10 08:33:33 -0500
+Processing by TasksController#new as HTML
+  Rendered tasks/_form.html.erb (11.6ms)
+  Rendered tasks/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 108ms (Views: 106.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2015-08-10 08:33:54 -0500
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WnlP0np5AXETieqL1JV+3xaOFOo4GPdMLGSUc8M4kuRMUyYyvnKOtqtwf/Hot0Z2vE2XB7mDrr/Hk/s3YK60WA==", "task"=>{"description"=>"task2", "startdate(1i)"=>"2015", "startdate(2i)"=>"8", "startdate(3i)"=>"10", "startdate(4i)"=>"13", "startdate(5i)"=>"33", "enddate(1i)"=>"2015", "enddate(2i)"=>"8", "enddate(3i)"=>"10", "enddate(4i)"=>"13", "enddate(5i)"=>"33", "toatalmandays"=>"8", "project_category_id"=>"2"}, "commit"=>"Create Task"}
+  [1m[35m (1.3ms)[0m  BEGIN
+  [1m[36mSQL (5.6ms)[0m  [1mINSERT INTO "tasks" ("description", "toatalmandays", "project_category_id", "startdate", "enddate", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["description", "task2"], ["toatalmandays", 8], ["project_category_id", 2], ["startdate", "2015-08-10 13:33:00.000000"], ["enddate", "2015-08-10 13:33:00.000000"], ["created_at", "2015-08-10 13:33:54.453927"], ["updated_at", "2015-08-10 13:33:54.453927"]]
+  [1m[35m (1.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/tasks/2
+Completed 302 Found in 15ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2015-08-10 08:33:54 -0500
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProjectCategory Load (0.2ms)[0m  SELECT  "project_categories".* FROM "project_categories" WHERE "project_categories"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered tasks/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 73ms (Views: 71.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2015-08-10 08:33:59 -0500
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.6ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  [1m[35mProjectCategory Load (0.2ms)[0m  SELECT  "project_categories".* FROM "project_categories" WHERE "project_categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mProjectCategory Load (0.2ms)[0m  [1mSELECT  "project_categories".* FROM "project_categories" WHERE "project_categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered tasks/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 66ms (Views: 64.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/project_categories" for 127.0.0.1 at 2015-08-10 08:34:24 -0500
+Processing by ProjectCategoriesController#index as HTML
+  [1m[35mProjectCategory Load (6.1ms)[0m  SELECT "project_categories".* FROM "project_categories"
+  [1m[36mProject Load (3.0ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered project_categories/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 83ms (Views: 73.4ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 08:34:30 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (7.6ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 83ms (Views: 74.4ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2015-08-10 08:34:36 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProject Load (0.8ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.8ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:72:in `project_params'
+  app/controllers/projects_controller.rb:26:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (65.4ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2015-08-10 08:34:37 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.3ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:72:in `project_params'
+  app/controllers/projects_controller.rb:26:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (8.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (93.7ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2015-08-10 08:36:21 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProject Load (4.0ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 400 Bad Request in 24ms (ActiveRecord: 9.9ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:72:in `project_params'
+  app/controllers/projects_controller.rb:26:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (4.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (4.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (93.8ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2015-08-10 08:37:11 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 400 Bad Request in 32ms (ActiveRecord: 2.5ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:72:in `project_params'
+  app/controllers/projects_controller.rb:26:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (9.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (3.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (35.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (82.5ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 08:40:19 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.4ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.4ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:72:in `project_params'
+  app/controllers/projects_controller.rb:26:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (95.0ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 08:40:25 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (5.7ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 400 Bad Request in 8ms (ActiveRecord: 5.7ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:72:in `project_params'
+  app/controllers/projects_controller.rb:26:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (5.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (3.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (7.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (65.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 08:40:31 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (8.0ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 111ms (Views: 101.1ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 08:40:34 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.3ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:72:in `project_params'
+  app/controllers/projects_controller.rb:26:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (8.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (81.1ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 08:40:34 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (10.4ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 400 Bad Request in 13ms (ActiveRecord: 10.4ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: project):
+  app/controllers/projects_controller.rb:72:in `project_params'
+  app/controllers/projects_controller.rb:26:in `edit'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (3.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (21.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (60.4ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 08:55:37 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProjectCategory Load (0.2ms)[0m  SELECT "project_categories".* FROM "project_categories" WHERE "project_categories"."project_id" = $1  [["project_id", 2]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_category_id" = $1[0m  [["project_category_id", 1]]
+  Rendered projects/_task_fields.html.erb (3.5ms)
+  Rendered projects/_task_fields.html.erb (0.4ms)
+  Rendered projects/_project_category_fields.html.erb (48.6ms)
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_category_id" = $1  [["project_category_id", 2]]
+  Rendered projects/_task_fields.html.erb (0.6ms)
+  Rendered projects/_task_fields.html.erb (0.8ms)
+  Rendered projects/_project_category_fields.html.erb (8.6ms)
+  Rendered projects/_task_fields.html.erb (0.7ms)
+  Rendered projects/_project_category_fields.html.erb (13.5ms)
+  Rendered projects/_form.html.erb (111.2ms)
+  Rendered projects/edit.html.erb within layouts/application (114.6ms)
+Completed 200 OK in 203ms (Views: 178.0ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/project_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 08:55:37 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-10 08:55:37 -0500
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 08:55:37 -0500
+
+
+Started GET "/assets/scaffolds.self-8c8c0a2a103b9fea3b840cf1dd5ed8c981f6a54c7cd85e7c8776623afeb8020c.css?body=1" for 127.0.0.1 at 2015-08-10 08:55:37 -0500
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 08:55:37 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-10 08:55:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-10 08:55:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-10 08:55:37 -0500
+
+
+Started GET "/assets/project_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 08:55:37 -0500
+
+
+Started GET "/assets/projects.self-bc2fde566dcaa97922431f0eee28a9b87fc04a96b2b133660ec20b3f2e213a64.js?body=1" for 127.0.0.1 at 2015-08-10 08:55:37 -0500
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 08:55:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-10 08:55:37 -0500
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 08:56:39 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (6.4ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 100ms (Views: 82.6ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 08:56:43 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mProjectCategory Load (0.2ms)[0m  [1mSELECT "project_categories".* FROM "project_categories" WHERE "project_categories"."project_id" = $1[0m  [["project_id", 2]]
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_category_id" = $1  [["project_category_id", 1]]
+  Rendered projects/_task_fields.html.erb (0.6ms)
+  Rendered projects/_task_fields.html.erb (0.8ms)
+  Rendered projects/_project_category_fields.html.erb (48.9ms)
+  [1m[36mTask Load (0.8ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_category_id" = $1[0m  [["project_category_id", 2]]
+  Rendered projects/_task_fields.html.erb (0.5ms)
+  Rendered projects/_task_fields.html.erb (0.8ms)
+  Rendered projects/_project_category_fields.html.erb (9.4ms)
+  Rendered projects/_task_fields.html.erb (0.6ms)
+  Rendered projects/_project_category_fields.html.erb (12.3ms)
+  Rendered projects/_form.html.erb (96.4ms)
+  Rendered projects/edit.html.erb within layouts/application (98.7ms)
+Completed 200 OK in 159ms (Views: 153.0ms | ActiveRecord: 3.9ms)
+
+
+Started PATCH "/projects/2" for 127.0.0.1 at 2015-08-10 08:56:58 -0500
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3egFHxAmhS97jWXYu/j1oBitABh2PPjyM1kUMEGoozjLwmz/1C0K6MN08KKH2s0Jsm6D9fenoQHYrnt04j6FhA==", "project"=>{"title"=>"JTC cleantech", "description"=>"new prj", "company"=>"JTC", "location"=>"jurrong", "supervisior"=>"lim", "date(1i)"=>"2015", "date(2i)"=>"8", "date(3i)"=>"10", "date(4i)"=>"09", "date(5i)"=>"28", "manday"=>"8", "workingweek"=>"5", "holiday"=>"2", "user_id"=>"1", "project_categories_attributes"=>{"0"=>{"description"=>"category one", "project_id"=>"2", "_destroy"=>"false", "tasks_attributes"=>{"0"=>{"description"=>"task 1", "_destroy"=>"false", "id"=>"1"}}, "id"=>"1"}, "1"=>{"description"=>"Category 2", "project_id"=>"2", "_destroy"=>"false", "tasks_attributes"=>{"0"=>{"description"=>"task2", "_destroy"=>"false", "id"=>"2"}}, "id"=>"2"}}}, "commit"=>"Update Project", "id"=>"2"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+Unpermitted parameters: _destroy, tasks_attributes
+Unpermitted parameters: _destroy, tasks_attributes
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+Unpermitted parameters: _destroy, tasks_attributes
+Unpermitted parameters: _destroy, tasks_attributes
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mProjectCategory Load (0.3ms)[0m  [1mSELECT "project_categories".* FROM "project_categories" WHERE "project_categories"."project_id" = $1 AND "project_categories"."id" IN (1, 2)[0m  [["project_id", 2]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/projects/2
+Completed 302 Found in 1177458ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-08-10 09:16:35 -0500
+
+SyntaxError (/home/viki/app/caston4.2/app/controllers/projects_controller.rb:75: syntax error, unexpected ',', expecting =>):
+  app/controllers/projects_controller.rb:75: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (63.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (123.9ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-08-10 09:18:53 -0500
+
+SyntaxError (/home/viki/app/caston4.2/app/controllers/projects_controller.rb:75: syntax error, unexpected '}', expecting =>
+...tdate,:enddate,:toatalmandays]}],
+...                               ^):
+  app/controllers/projects_controller.rb:75: syntax error, unexpected '}', expecting =>
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (38.3ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-08-10 09:19:23 -0500
+
+SyntaxError (/home/viki/app/caston4.2/app/controllers/projects_controller.rb:75: syntax error, unexpected '}', expecting =>
+...tdate,:enddate,:toatalmandays]}],
+...                               ^):
+  app/controllers/projects_controller.rb:75: syntax error, unexpected '}', expecting =>
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (41.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-08-10 09:20:20 -0500
+
+SyntaxError (/home/viki/app/caston4.2/app/controllers/projects_controller.rb:75: syntax error, unexpected ',', expecting =>):
+  app/controllers/projects_controller.rb:75: syntax error, unexpected ',', expecting =>
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (3.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (19.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (42.3ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-08-10 09:20:55 -0500
+
+SyntaxError (/home/viki/app/caston4.2/app/controllers/projects_controller.rb:75: syntax error, unexpected '\n', expecting =>):
+  app/controllers/projects_controller.rb:75: syntax error, unexpected '\n', expecting =>
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (21.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (45.9ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-08-10 09:22:05 -0500
+
+SyntaxError (/home/viki/app/caston4.2/app/controllers/projects_controller.rb:75: syntax error, unexpected '\n', expecting =>):
+  app/controllers/projects_controller.rb:75: syntax error, unexpected '\n', expecting =>
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.8ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (20.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (39.7ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-08-10 09:28:14 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", "2"]]
+  Rendered projects/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 98ms (Views: 73.7ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/project_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 09:28:14 -0500
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 09:28:14 -0500
+
+
+Started GET "/assets/scaffolds.self-8c8c0a2a103b9fea3b840cf1dd5ed8c981f6a54c7cd85e7c8776623afeb8020c.css?body=1" for 127.0.0.1 at 2015-08-10 09:28:14 -0500
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 09:28:14 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-10 09:28:14 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-10 09:28:14 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-10 09:28:14 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-10 09:28:14 -0500
+
+
+Started GET "/assets/project_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 09:28:14 -0500
+
+
+Started GET "/assets/projects.self-bc2fde566dcaa97922431f0eee28a9b87fc04a96b2b133660ec20b3f2e213a64.js?body=1" for 127.0.0.1 at 2015-08-10 09:28:14 -0500
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 09:28:14 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-10 09:28:14 -0500
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 09:28:41 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2015-08-10 09:28:45 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mProjectCategory Load (0.2ms)[0m  [1mSELECT "project_categories".* FROM "project_categories" WHERE "project_categories"."project_id" = $1[0m  [["project_id", 3]]
+  Rendered projects/_task_fields.html.erb (0.8ms)
+  Rendered projects/_project_category_fields.html.erb (15.4ms)
+  Rendered projects/_form.html.erb (40.3ms)
+  Rendered projects/edit.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 102ms (Views: 96.4ms | ActiveRecord: 3.9ms)
+
+
+Started PATCH "/projects/3" for 127.0.0.1 at 2015-08-10 09:28:51 -0500
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CGnQ2j514lD0zzHooX9MOVQaLMA3vs09AKkJaXPAosEeQ7k6+n5tl0w2pJKdXXSQ/tmvLbYllM7rXmYt0FaEfQ==", "project"=>{"title"=>"Project 2", "description"=>"Prj 2", "company"=>"once", "location"=>"third", "supervisior"=>"lu", "date(1i)"=>"2015", "date(2i)"=>"8", "date(3i)"=>"10", "date(4i)"=>"13", "date(5i)"=>"19", "manday"=>"6", "workingweek"=>"5", "holiday"=>"4", "user_id"=>"1"}, "commit"=>"Update Project", "id"=>"3"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/projects/3
+Completed 302 Found in 103963ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2015-08-10 09:30:35 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProject Load (2.4ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  Rendered projects/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 80ms (Views: 73.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 09:30:47 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (6.9ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 87ms (Views: 79.2ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 09:30:58 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProjectCategory Load (0.5ms)[0m  SELECT "project_categories".* FROM "project_categories" WHERE "project_categories"."project_id" = $1  [["project_id", 2]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_category_id" = $1[0m  [["project_category_id", 1]]
+  Rendered projects/_task_fields.html.erb (0.5ms)
+  Rendered projects/_task_fields.html.erb (0.5ms)
+  Rendered projects/_project_category_fields.html.erb (17.2ms)
+  [1m[35mTask Load (0.8ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_category_id" = $1  [["project_category_id", 2]]
+  Rendered projects/_task_fields.html.erb (0.9ms)
+  Rendered projects/_task_fields.html.erb (0.4ms)
+  Rendered projects/_project_category_fields.html.erb (7.2ms)
+  Rendered projects/_task_fields.html.erb (0.9ms)
+  Rendered projects/_project_category_fields.html.erb (5.4ms)
+  Rendered projects/_form.html.erb (53.9ms)
+  Rendered projects/edit.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 130ms (Views: 126.3ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/projects/2" for 127.0.0.1 at 2015-08-10 09:31:04 -0500
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kG/M3PL2ho1/WlQuxQUca+Lc2ghdSpNGHpL5g41k9KyGRaU8Nv0JSsejwVT5JyTCSB9Z5dzRyrX1ZZbHLvLSEA==", "project"=>{"title"=>"JTC cleantech", "description"=>"new prj", "company"=>"JTC", "location"=>"jurrong", "supervisior"=>"lim", "date(1i)"=>"2015", "date(2i)"=>"8", "date(3i)"=>"10", "date(4i)"=>"09", "date(5i)"=>"28", "manday"=>"8", "workingweek"=>"5", "holiday"=>"2", "user_id"=>"1", "project_categories_attributes"=>{"0"=>{"description"=>"category one", "project_id"=>"2", "_destroy"=>"false", "tasks_attributes"=>{"0"=>{"description"=>"task 1", "_destroy"=>"false", "id"=>"1"}}, "id"=>"1"}, "1"=>{"description"=>"Category 2", "project_id"=>"2", "_destroy"=>"false", "tasks_attributes"=>{"0"=>{"description"=>"task2", "_destroy"=>"false", "id"=>"2"}}, "id"=>"2"}}}, "commit"=>"Update Project", "id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed   in 44575ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-08-10 09:32:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.5ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (2.6ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered projects/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 315ms (Views: 240.8ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/project_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 09:32:32 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-10 09:32:32 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-10 09:32:32 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-10 09:32:32 -0500
+
+
+Started GET "/assets/scaffolds.self-8c8c0a2a103b9fea3b840cf1dd5ed8c981f6a54c7cd85e7c8776623afeb8020c.css?body=1" for 127.0.0.1 at 2015-08-10 09:32:32 -0500
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 09:32:32 -0500
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 09:32:32 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-10 09:32:32 -0500
+
+
+Started GET "/assets/project_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 09:32:32 -0500
+
+
+Started GET "/assets/projects.self-bc2fde566dcaa97922431f0eee28a9b87fc04a96b2b133660ec20b3f2e213a64.js?body=1" for 127.0.0.1 at 2015-08-10 09:32:32 -0500
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 09:32:32 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-10 09:32:32 -0500
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 09:32:35 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 86ms (Views: 78.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-10 09:32:38 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProjectCategory Load (0.4ms)[0m  SELECT "project_categories".* FROM "project_categories" WHERE "project_categories"."project_id" = $1  [["project_id", 2]]
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_category_id" = $1[0m  [["project_category_id", 1]]
+  Rendered projects/_task_fields.html.erb (10.7ms)
+  Rendered projects/_task_fields.html.erb (1.0ms)
+  Rendered projects/_project_category_fields.html.erb (35.4ms)
+  [1m[35mTask Load (0.7ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_category_id" = $1  [["project_category_id", 2]]
+  Rendered projects/_task_fields.html.erb (0.5ms)
+  Rendered projects/_task_fields.html.erb (0.6ms)
+  Rendered projects/_project_category_fields.html.erb (12.5ms)
+  Rendered projects/_task_fields.html.erb (9.5ms)
+  Rendered projects/_project_category_fields.html.erb (13.6ms)
+  Rendered projects/_form.html.erb (208.1ms)
+  Rendered projects/edit.html.erb within layouts/application (225.7ms)
+Completed 200 OK in 311ms (Views: 301.9ms | ActiveRecord: 7.3ms)
+
+
+Started PATCH "/projects/2" for 127.0.0.1 at 2015-08-10 09:32:59 -0500
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bj7CXUsGssZXnIFk0zHH47g3rYxQftiqpvT26rpsL4oQFKu9jw09Ae9lFB7vE/9KEvQuYdHlgVlNA5muGfoJNg==", "project"=>{"title"=>"JTC cleantech", "description"=>"new prj", "company"=>"JTC", "location"=>"jurrong", "supervisior"=>"lim", "date(1i)"=>"2015", "date(2i)"=>"8", "date(3i)"=>"10", "date(4i)"=>"09", "date(5i)"=>"28", "manday"=>"8", "workingweek"=>"5", "holiday"=>"2", "user_id"=>"1", "project_categories_attributes"=>{"0"=>{"description"=>"category one", "project_id"=>"2", "_destroy"=>"false", "tasks_attributes"=>{"0"=>{"description"=>"task 1", "_destroy"=>"false", "id"=>"1"}}, "id"=>"1"}, "1"=>{"description"=>"Category 2", "project_id"=>"2", "_destroy"=>"false", "tasks_attributes"=>{"0"=>{"description"=>"task2", "_destroy"=>"false", "id"=>"2"}}, "id"=>"2"}}}, "commit"=>"Update Project", "id"=>"2"}
+  [1m[36mProject Load (0.8ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Unpermitted parameter: _destroy
+Unpermitted parameter: _destroy
+  [1m[35mCACHE (1.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", "2"]]
+Unpermitted parameter: _destroy
+Unpermitted parameter: _destroy
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mProjectCategory Load (0.6ms)[0m  SELECT "project_categories".* FROM "project_categories" WHERE "project_categories"."project_id" = $1 AND "project_categories"."id" IN (1, 2)  [["project_id", 2]]
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_category_id" = $1 AND "tasks"."id" = 1[0m  [["project_category_id", 1]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_category_id" = $1 AND "tasks"."id" = 2  [["project_category_id", 2]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/projects/2
+Completed 302 Found in 62922ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-08-10 09:34:02 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (3.5ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered projects/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 82ms (Views: 75.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 09:36:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.6ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 242ms (Views: 196.9ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/assets/project_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 09:36:11 -0500
+
+
+Started GET "/assets/scaffolds.self-8c8c0a2a103b9fea3b840cf1dd5ed8c981f6a54c7cd85e7c8776623afeb8020c.css?body=1" for 127.0.0.1 at 2015-08-10 09:36:11 -0500
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 09:36:11 -0500
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 09:36:11 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-10 09:36:11 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-10 09:36:11 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-10 09:36:11 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-10 09:36:12 -0500
+
+
+Started GET "/assets/project_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 09:36:12 -0500
+
+
+Started GET "/assets/projects.self-bc2fde566dcaa97922431f0eee28a9b87fc04a96b2b133660ec20b3f2e213a64.js?body=1" for 127.0.0.1 at 2015-08-10 09:36:12 -0500
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 09:36:12 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-10 09:36:12 -0500
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2015-08-10 09:36:18 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.9ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mProjectCategory Load (0.3ms)[0m  SELECT "project_categories".* FROM "project_categories" WHERE "project_categories"."project_id" = $1  [["project_id", 1]]
+  Rendered projects/_task_fields.html.erb (6.1ms)
+  Rendered projects/_project_category_fields.html.erb (30.5ms)
+  Rendered projects/_form.html.erb (82.4ms)
+  Rendered projects/edit.html.erb within layouts/application (86.3ms)
+Completed 200 OK in 155ms (Views: 140.3ms | ActiveRecord: 7.1ms)
+
+
+Started PATCH "/projects/1" for 127.0.0.1 at 2015-08-10 09:36:53 -0500
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UsgfgjHPzCxsH/TaR+xPtvaW4YkOw9fpMBXRO+ZemwFE4nZi9cRD69TmYaB7zncfXFViZI9Yjhrb4r5/Rci9vQ==", "project"=>{"title"=>"project1", "description"=>"PRJ1", "company"=>"new", "location"=>"har", "supervisior"=>"tim", "date(1i)"=>"2015", "date(2i)"=>"8", "date(3i)"=>"10", "date(4i)"=>"14", "date(5i)"=>"36", "manday"=>"9", "workingweek"=>"7", "holiday"=>"0", "user_id"=>"2"}, "commit"=>"Update Project", "id"=>"1"}
+  [1m[36mProject Load (2.3ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 1]]
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-10 10:43:13 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (45.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (62.1ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (236.6ms)
+Completed 200 OK in 579ms (Views: 342.8ms | ActiveRecord: 205.4ms)
+
+
+Started GET "/assets/project_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 10:43:15 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-10 10:43:15 -0500
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 10:43:15 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-10 10:43:15 -0500
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-10 10:43:15 -0500
+
+
+Started GET "/assets/scaffolds.self-8c8c0a2a103b9fea3b840cf1dd5ed8c981f6a54c7cd85e7c8776623afeb8020c.css?body=1" for 127.0.0.1 at 2015-08-10 10:43:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-10 10:43:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-10 10:43:15 -0500
+
+
+Started GET "/assets/projects.self-bc2fde566dcaa97922431f0eee28a9b87fc04a96b2b133660ec20b3f2e213a64.js?body=1" for 127.0.0.1 at 2015-08-10 10:43:15 -0500
+
+
+Started GET "/assets/project_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 10:43:15 -0500
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-10 10:43:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-10 10:43:15 -0500
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2015-08-10 10:43:22 -0500
+Processing by ProjectsController#new as HTML
+  Rendered projects/_task_fields.html.erb (8.5ms)
+  Rendered projects/_project_category_fields.html.erb (25.2ms)
+  Rendered projects/_task_fields.html.erb (9.5ms)
+  Rendered projects/_project_category_fields.html.erb (14.1ms)
+  Rendered projects/_form.html.erb (173.8ms)
+  Rendered projects/new.html.erb within layouts/application (196.9ms)
+Completed 200 OK in 344ms (Views: 246.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 10:44:23 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (1.0ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 66ms (Views: 64.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2015-08-10 10:44:26 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProject Load (0.9ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mProjectCategory Load (38.0ms)[0m  [1mSELECT "project_categories".* FROM "project_categories" WHERE "project_categories"."project_id" = $1[0m  [["project_id", 3]]
+  Rendered projects/_task_fields.html.erb (6.3ms)
+  Rendered projects/_project_category_fields.html.erb (12.0ms)
+  Rendered projects/_form.html.erb (69.7ms)
+  Rendered projects/edit.html.erb within layouts/application (73.0ms)
+Completed 200 OK in 263ms (Views: 87.0ms | ActiveRecord: 39.1ms)
+
+
+Started PATCH "/projects/3" for 127.0.0.1 at 2015-08-10 10:45:30 -0500
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4w4W9a/7F6Hbp3RcJEKrxR6iM9W6i72tz2247YIO+dsXdzu0mWAh4G5ANIce3MUb1M68af2MiRuanAzgKDwaqg==", "project"=>{"title"=>"Project 2", "description"=>"Prj 2", "company"=>"once", "location"=>"third", "supervisior"=>"lu", "date(1i)"=>"2015", "date(2i)"=>"8", "date(3i)"=>"10", "date(4i)"=>"13", "date(5i)"=>"19", "manday"=>"6", "workingweek"=>"5", "holiday"=>"4", "user_id"=>"1", "project_categories_attributes"=>{"1439221475462"=>{"description"=>"cate 6", "project_id"=>"3", "_destroy"=>"false", "tasks_attributes"=>{"1439221512292"=>{"description"=>"ohho", "startdate(1i)"=>"2015", "startdate(2i)"=>"8", "startdate(3i)"=>"10", "startdate(4i)"=>"15", "startdate(5i)"=>"44", "enddate(1i)"=>"2015", "enddate(2i)"=>"8", "enddate(3i)"=>"10", "enddate(4i)"=>"15", "enddate(5i)"=>"44", "toatalmandays"=>"90", "project_category_id"=>"3", "_destroy"=>"false"}}}}}, "commit"=>"Update Project", "id"=>"3"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 3]]
+Completed   in 117147ms (ActiveRecord: 0.3ms)
+
+
+Started PATCH "/projects/3" for 127.0.0.1 at 2015-08-10 10:48:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4w4W9a/7F6Hbp3RcJEKrxR6iM9W6i72tz2247YIO+dsXdzu0mWAh4G5ANIce3MUb1M68af2MiRuanAzgKDwaqg==", "project"=>{"title"=>"Project 2", "description"=>"Prj 2", "company"=>"once", "location"=>"third", "supervisior"=>"lu", "date(1i)"=>"2015", "date(2i)"=>"8", "date(3i)"=>"10", "date(4i)"=>"13", "date(5i)"=>"19", "manday"=>"6", "workingweek"=>"5", "holiday"=>"4", "user_id"=>"1", "project_categories_attributes"=>{"1439221475462"=>{"description"=>"cate 6", "project_id"=>"3", "_destroy"=>"false", "tasks_attributes"=>{"1439221512292"=>{"description"=>"ohho", "startdate(1i)"=>"2015", "startdate(2i)"=>"8", "startdate(3i)"=>"10", "startdate(4i)"=>"15", "startdate(5i)"=>"44", "enddate(1i)"=>"2015", "enddate(2i)"=>"8", "enddate(3i)"=>"10", "enddate(4i)"=>"15", "enddate(5i)"=>"44", "toatalmandays"=>"90", "project_category_id"=>"3", "_destroy"=>"false"}}}}}, "commit"=>"Update Project", "id"=>"3"}
+  [1m[35mProject Load (5.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (53.2ms)[0m  [1mINSERT INTO "project_categories" ("description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "cate 6"], ["project_id", 3], ["created_at", "2015-08-10 15:49:31.462652"], ["updated_at", "2015-08-10 15:49:31.462652"]]
+  [1m[35mSQL (17.1ms)[0m  INSERT INTO "tasks" ("description", "toatalmandays", "startdate", "enddate", "project_category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["description", "ohho"], ["toatalmandays", 90], ["startdate", "2015-08-10 15:44:00.000000"], ["enddate", "2015-08-10 15:44:00.000000"], ["project_category_id", 3], ["created_at", "2015-08-10 15:49:31.522203"], ["updated_at", "2015-08-10 15:49:31.522203"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/projects/3
+Completed 302 Found in 73318ms (ActiveRecord: 83.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 10:49:31 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.8ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 240ms (Views: 232.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 10:49:31 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (1.2ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 70ms (Views: 67.8ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/projects/3" for 127.0.0.1 at 2015-08-10 10:49:43 -0500
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4w4W9a/7F6Hbp3RcJEKrxR6iM9W6i72tz2247YIO+dsXdzu0mWAh4G5ANIce3MUb1M68af2MiRuanAzgKDwaqg==", "project"=>{"title"=>"Project 2", "description"=>"Prj 2", "company"=>"once", "location"=>"third", "supervisior"=>"lu", "date(1i)"=>"2015", "date(2i)"=>"8", "date(3i)"=>"10", "date(4i)"=>"13", "date(5i)"=>"19", "manday"=>"6", "workingweek"=>"5", "holiday"=>"4", "user_id"=>"1", "project_categories_attributes"=>{"1439221475462"=>{"description"=>"cate 6", "project_id"=>"3", "_destroy"=>"false", "tasks_attributes"=>{"1439221512292"=>{"description"=>"ohho", "startdate(1i)"=>"2015", "startdate(2i)"=>"8", "startdate(3i)"=>"10", "startdate(4i)"=>"15", "startdate(5i)"=>"44", "enddate(1i)"=>"2015", "enddate(2i)"=>"8", "enddate(3i)"=>"10", "enddate(4i)"=>"15", "enddate(5i)"=>"44", "toatalmandays"=>"90", "project_category_id"=>"3", "_destroy"=>"false"}}}}}, "commit"=>"Update Project", "id"=>"3"}
+  [1m[35mProject Load (6.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (4.5ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "project_categories" ("description", "project_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["description", "cate 6"], ["project_id", 3], ["created_at", "2015-08-10 15:49:43.254679"], ["updated_at", "2015-08-10 15:49:43.254679"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tasks" ("description", "toatalmandays", "startdate", "enddate", "project_category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["description", "ohho"], ["toatalmandays", 90], ["startdate", "2015-08-10 15:44:00.000000"], ["enddate", "2015-08-10 15:44:00.000000"], ["project_category_id", 4], ["created_at", "2015-08-10 15:49:43.257503"], ["updated_at", "2015-08-10 15:49:43.257503"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/projects/3
+Completed 302 Found in 56ms (ActiveRecord: 22.3ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2015-08-10 10:49:43 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProject Load (0.7ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  Rendered projects/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 73ms (Views: 67.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2015-08-10 10:49:49 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 86ms (Views: 85.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-10 10:50:52 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (2.9ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 73ms (Views: 69.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/en/" for 127.0.0.1 at 2015-08-10 10:53:24 -0500
+
+ActionController::RoutingError (No route matches [GET] "/en"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/viki/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/viki/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/viki/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (98.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (83.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (136.8ms)
+  [1m[36mProject Load (125.4ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[36mProject Load (102.7ms)[0m  [1mSELECT  "projects".* FROM "projects"  ORDER BY "projects"."id" DESC LIMIT 1[0m
+  [1m[35mProject Load (0.9ms)[0m  SELECT  "projects".* FROM "projects"  ORDER BY "projects"."id" DESC LIMIT 1
+  [1m[36mProjectCategory Load (23.3ms)[0m  [1mSELECT "project_categories".* FROM "project_categories" WHERE "project_categories"."project_id" = $1[0m  [["project_id", 3]]
+  [1m[35mProject Load (0.4ms)[0m  SELECT  "projects".* FROM "projects"  ORDER BY "projects"."id" DESC LIMIT 1
+  [1m[36mProjectCategory Load (0.2ms)[0m  [1mSELECT "project_categories".* FROM "project_categories" WHERE "project_categories"."project_id" = $1[0m  [["project_id", 3]]
+  [1m[35mTask Load (18.5ms)[0m  SELECT "tasks".* FROM "tasks"
+  [1m[36mTask Load (0.9ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  ORDER BY "tasks"."id" DESC LIMIT 1[0m
+  [1m[35mTask Load (0.8ms)[0m  SELECT  "tasks".* FROM "tasks"  ORDER BY "tasks"."id" DESC LIMIT 1
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  ORDER BY "tasks"."id" DESC LIMIT 1[0m
+  [1m[35mTask Load (0.7ms)[0m  SELECT  "tasks".* FROM "tasks"  ORDER BY "tasks"."id" DESC LIMIT 1
+  [1m[36mTask Load (0.7ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  ORDER BY "tasks"."id" DESC LIMIT 1[0m
+  [1m[35mTask Load (0.8ms)[0m  SELECT  "tasks".* FROM "tasks"  ORDER BY "tasks"."id" DESC LIMIT 1
+  [1m[36mTask Load (0.5ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  ORDER BY "tasks"."id" DESC LIMIT 1[0m
+  [1m[35mTask Load (0.9ms)[0m  SELECT  "tasks".* FROM "tasks"  ORDER BY "tasks"."id" DESC LIMIT 1
+  [1m[36mTask Load (0.6ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  ORDER BY "tasks"."id" DESC LIMIT 1[0m
+  [1m[35mTask Load (2.7ms)[0m  SELECT  "tasks".* FROM "tasks"  ORDER BY "tasks"."id" DESC LIMIT 1
+  [1m[36mTask Load (2.9ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  ORDER BY "tasks"."id" DESC LIMIT 1[0m
+  [1m[35mTask Load (0.7ms)[0m  SELECT  "tasks".* FROM "tasks"  ORDER BY "tasks"."id" DESC LIMIT 1
+  [1m[36mTask Load (0.3ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  ORDER BY "tasks"."id" ASC LIMIT 1[0m
+
+
+Started GET "/login" for 127.0.0.1 at 2015-08-12 09:56:13 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (38.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/login"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/viki/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/viki/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/viki/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (34.4ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (59.7ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (162.1ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (27.9ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/viki/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (122.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-12 09:56:18 -0500
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (152.4ms)[0m  SELECT "projects".* FROM "projects"
+  Rendered projects/index.html.erb within layouts/application (344.6ms)
+Completed 200 OK in 779ms (Views: 368.2ms | ActiveRecord: 301.7ms)
+
+
+Started GET "/assets/project_categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-12 09:56:19 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-12 09:56:19 -0500
+
+
+Started GET "/assets/scaffolds.self-734e9f7fd57333d2090494b4789d117f1aceaff66df380a99ae3286105e14f04.css?body=1" for 127.0.0.1 at 2015-08-12 09:56:19 -0500
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-12 09:56:19 -0500
+
+
+Started GET "/assets/tasks.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-12 09:56:19 -0500
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-12 09:56:19 -0500
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-12 09:56:19 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-12 09:56:19 -0500
+
+
+Started GET "/assets/projects.self-bc2fde566dcaa97922431f0eee28a9b87fc04a96b2b133660ec20b3f2e213a64.js?body=1" for 127.0.0.1 at 2015-08-12 09:56:19 -0500
+
+
+Started GET "/assets/project_categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-12 09:56:19 -0500
+
+
+Started GET "/assets/tasks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-12 09:56:19 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-12 09:56:19 -0500
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2015-08-12 09:56:22 -0500
+Processing by ProjectsController#new as HTML
+  Rendered projects/_task_fields.html.erb (13.5ms)
+  Rendered projects/_project_category_fields.html.erb (30.0ms)
+  Rendered projects/_task_fields.html.erb (10.6ms)
+  Rendered projects/_project_category_fields.html.erb (14.6ms)
+  Rendered projects/_form.html.erb (77.5ms)
+  Rendered projects/new.html.erb within layouts/application (78.9ms)
+Completed 200 OK in 224ms (Views: 145.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2015-08-12 09:56:36 -0500
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mProjectCategory Load (6.6ms)[0m  SELECT "project_categories".* FROM "project_categories" WHERE "project_categories"."project_id" = $1  [["project_id", 2]]
+  [1m[36mTask Load (13.4ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_category_id" = $1[0m  [["project_category_id", 1]]
+  Rendered projects/_task_fields.html.erb (17.6ms)
+  Rendered projects/_task_fields.html.erb (15.7ms)
+  Rendered projects/_project_category_fields.html.erb (58.9ms)
+  [1m[35mTask Load (0.4ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_category_id" = $1  [["project_category_id", 2]]
+  Rendered projects/_task_fields.html.erb (24.6ms)
+  Rendered projects/_task_fields.html.erb (14.6ms)
+  Rendered projects/_project_category_fields.html.erb (52.2ms)
+  Rendered projects/_task_fields.html.erb (10.2ms)
+  Rendered projects/_project_category_fields.html.erb (16.9ms)
+  Rendered projects/_form.html.erb (175.8ms)
+  Rendered projects/edit.html.erb within layouts/application (180.4ms)
+Completed 200 OK in 297ms (Views: 232.9ms | ActiveRecord: 26.0ms)
+
+
+Started PATCH "/projects/2" for 127.0.0.1 at 2015-08-12 09:56:45 -0500
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nx0yrbI2LaMnLfZvKdyMdvx10wChoiWEKkVXyEoUq6CjwdQ2g0z90pCWThRj9H/x6PCbx8OFaegGuhxBsMRP6Q==", "project"=>{"title"=>"JTC cleantech", "description"=>"new prj", "company"=>"JTC", "location"=>"jurrong", "supervisior"=>"lim", "date(1i)"=>"2015", "date(2i)"=>"8", "date(3i)"=>"10", "date(4i)"=>"09", "date(5i)"=>"28", "manday"=>"8", "workingweek"=>"5", "holiday"=>"2", "user_id"=>"1", "project_categories_attributes"=>{"0"=>{"description"=>"category one", "project_id"=>"2", "_destroy"=>"false", "tasks_attributes"=>{"0"=>{"description"=>"task 1", "startdate(1i)"=>"2015", "startdate(2i)"=>"8", "startdate(3i)"=>"10", "startdate(4i)"=>"11", "startdate(5i)"=>"28", "enddate(1i)"=>"2015", "enddate(2i)"=>"8", "enddate(3i)"=>"10", "enddate(4i)"=>"11", "enddate(5i)"=>"28", "toatalmandays"=>"5", "project_category_id"=>"1", "_destroy"=>"false", "id"=>"1"}}, "id"=>"1"}, "1"=>{"description"=>"Category 2", "project_id"=>"2", "_destroy"=>"false", "tasks_attributes"=>{"0"=>{"description"=>"task2", "startdate(1i)"=>"2015", "startdate(2i)"=>"8", "startdate(3i)"=>"10", "startdate(4i)"=>"13", "startdate(5i)"=>"33", "enddate(1i)"=>"2015", "enddate(2i)"=>"8", "enddate(3i)"=>"10", "enddate(4i)"=>"13", "enddate(5i)"=>"33", "toatalmandays"=>"8", "project_category_id"=>"2", "_destroy"=>"false", "id"=>"2"}}, "id"=>"2"}}}, "commit"=>"Update Project", "id"=>"2"}
+  [1m[36mProject Load (7.4ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36m (2.0ms)[0m  [1mBEGIN[0m
+  [1m[35mProjectCategory Load (0.4ms)[0m  SELECT "project_categories".* FROM "project_categories" WHERE "project_categories"."project_id" = $1 AND "project_categories"."id" IN (1, 2)  [["project_id", 2]]
+  [1m[36mTask Load (0.4ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_category_id" = $1 AND "tasks"."id" = 1[0m  [["project_category_id", 1]]
+  [1m[35mTask Load (1.3ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."project_category_id" = $1 AND "tasks"."id" = 2  [["project_category_id", 2]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/projects/2
+Completed 302 Found in 42ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2015-08-12 09:56:45 -0500
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered projects/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 0.4ms)

@@ -1,6 +1,14 @@
 <fieldset>
   <%= f.label :description, "Task" %>
   <%= f.text_area :description %>
+  <%= f.label :startdate %>
+  <%= f.datetime_select :startdate %>
+  <%= f.label :enddate %>
+  <%= f.datetime_select :enddate %>
+  <%= f.label :toatalmandays %>
+   <%= f.number_field :toatalmandays %>
+   <%= f.label :project_category_id %>
+   <%= f.text_field :project_category_id %>
   <%= f.hidden_field :_destroy %>
   <%= link_to "remove", '#', class: "remove_fields" %>
 </fieldset>
